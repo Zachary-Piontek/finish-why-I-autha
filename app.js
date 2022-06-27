@@ -40,9 +40,11 @@ function checkAuth(response) {
     if (response?.error) {
         // *** 
         // 1. console.log the response.error
-        // 2. set the errorMessage state from response.error.message
         // (keep this line👇 before console.log)
         // eslint-disable-next-line no-console
+        console.log(response.error);
+        // 2. set the errorMessage state from response.error.message
+        errorMessage = response.error.message;
 
         display();
     }

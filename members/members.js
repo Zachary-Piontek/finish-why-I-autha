@@ -12,11 +12,17 @@ async function handlePageLoad() {
     user = await getUser();
     // *** if there is a **not** user, redirect (use replace) to '../'
 
+    if (user !== user) {
+        window.location.replace('../');
+        return;
+    }
+    
     display();
+    
 }
-
 async function handleSignOut() {
     // *** call sign out (don't forget call is asynchronous!)
+    
 }
 
 // Create each component: 

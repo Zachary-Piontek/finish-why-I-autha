@@ -22,4 +22,5 @@ export async function signIn(email, password) {
 
 export async function signOut() {
     // *** implement supabase sign out
+    return await client.auth.signOut();
 }

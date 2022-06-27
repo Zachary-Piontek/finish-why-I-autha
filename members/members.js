@@ -1,6 +1,6 @@
 // import services and utilities
 // *** import needed service methods
-import { getUser } from '../services/members-service.js';
+import { getUser, signOut } from '../services/members-service.js';
 
 let user = null;
 
@@ -12,7 +12,7 @@ async function handlePageLoad() {
     user = await getUser();
     // *** if there is a **not** user, redirect (use replace) to '../'
 
-    if (user !== user) {
+    if (!user) {
         window.location.replace('../');
         return;
     }
@@ -22,6 +22,7 @@ async function handlePageLoad() {
 }
 async function handleSignOut() {
     // *** call sign out (don't forget call is asynchronous!)
+    return await signOut();
     
 }
 

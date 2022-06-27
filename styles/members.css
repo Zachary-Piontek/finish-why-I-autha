@@ -1,0 +1,14 @@
+
+#sign-out {
+    flex-grow: 2;
+    margin-right: 20px;
+    text-align: right;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
